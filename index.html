@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.section{
+				position: relative;
+			}
+			.section1{
+				background: url(img/ia_100000003.jpg) 0px 0px/100% 100%;
+			}
+			.section5{
+				height: 312px !important;
+			}
+			.list1{
+				width: 75%;
+				position: absolute;
+				left: 12.5%;
+				bottom: 30px;
+			}
+			.list1 li{
+				width: calc((100% / 3) - 4px);
+				float: left;
+				position: relative;
+				top: 80px;
+				opacity: 0;
+				list-style: none;
+			}
+			/*标签同时有.section1，.current这两个类名*/
+			.section1.current .list1 li:nth-child(1){
+				animation: myli1 1s forwards;
+			}
+			.section1.current .list1 li:nth-child(2){
+				animation: myli1 1s 0.6s forwards;
+			}
+			.section1.current .list1 li:nth-child(3){
+				animation: myli1 1s 0.9s forwards;
+			}
+			@keyframes myli1{
+				from{top: 80px;opacity: 0;}
+				to{top: 0px;opacity: 1;}
+			}
+			.list1 li:nth-child(2){
+				margin: 0px 6px;
+			}
+			.smallbox{
+				height: 82px;
+				width: 100%;
+				background: white;
+				position: relative;
+			}
+			.smallbox img{
+				position: absolute;
+				top: 24px;
+				right: 25px;
+			}
+			.smallbox p{
+				margin-left: 20px;
+			}
+			.smallbox p:first-child{
+				padding-top:20px ;
+			}
+			.bigbox{
+				position: absolute;
+				bottom: = 0px;
+				left: 0px;
+				width: 75vw;
+				background: rgba(225,82,23,1);
+			.bigbox2 img{
+				width: 30%;
+				float: left;
+				margin: 0px 3%;
+			.bigbox2 div{
+				float: left;
+				padding: 50%
+				padding-top=50%;
+			}
+			}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="fullpage">
+			<div class="section section1">
+				<ul class="list1">
+					<li>
+						<div class="smallbox">
+							<p>乳氏板块1</p>
+							<p>皇者，乳氏先锋</p>
+							<img src="img/ia_100000029.png" />
+						</div>
+						<div class="bigbox">
+							<div class="bigbox2">
+								<img src="img/ia_100000010.jpg" />
+								<div>
+									<h1>乳氏板块</h1>
+									<p>成立之初，皇氏集团确定了以高起点、高科技、高质量来构筑发展之道，率先引进先进生产线，发展人才引进战略，开发高端乳制品。乳业板块主营液态乳制品的生产、加工、销售以及与此产业关联的奶牛养殖、牧草种植业务。从牧草种植到奶牛养殖，从鲜奶加工到销售，公司已形成完善的上下游产业链，具备了全面的竞争优势。</p>
+									<a href="#">立即了解</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="smallbox">
+							<p>乳氏板块2</p>
+							<p>皇者，乳氏先锋</p>
+							<img src="img/ia_100000029.png" />
+						</div>
+						<div class="bigbox">
+							<div class="bigbox2">
+								<img src="img/ia_100000010.jpg" />
+								<div>
+									<h1>乳氏板块3</h1>
+									<p>成立之初，皇氏集团确定了以高起点、高科技、高质量来构筑发展之道，率先引进先进生产线，发展人才引进战略，开发高端乳制品。乳业板块主营液态乳制品的生产、加工、销售以及与此产业关联的奶牛养殖、牧草种植业务。从牧草种植到奶牛养殖，从鲜奶加工到销售，公司已形成完善的上下游产业链，具备了全面的竞争优势。</p>
+									<a href="#">立即了解</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="smallbox">
+							<p>乳氏板块4</p>
+							<p>皇者，乳氏先锋</p>
+							<img src="img/ia_100000029.png" />
+						</div>
+						<div class="bigbox">
+							<div class="bigbox2">
+								<img src="img/ia_100000010.jpg" />
+								<div>
+									<h1>乳氏板块</h1>
+									<p>成立之初，皇氏集团确定了以高起点、高科技、高质量来构筑发展之道，率先引进先进生产线，发展人才引进战略，开发高端乳制品。乳业板块主营液态乳制品的生产、加工、销售以及与此产业关联的奶牛养殖、牧草种植业务。从牧草种植到奶牛养殖，从鲜奶加工到销售，公司已形成完善的上下游产业链，具备了全面的竞争优势。</p>
+									<a href="#">立即了解</a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="section">2</div>
+			<div class="section">3</div>
+			<div class="section">4</div>
+			<div class="section section5 fp-auto-height">5</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.fullPage.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', 'red'],
+				afterLoad: function (anchorLink, index){
+					//删除类名
+					$('.section').removeClass('current');
+					// 添加类名
+					$('.section').eq(index - 1).addClass('current');
+				},
+			});
+		});
+	</script>
+</html>
